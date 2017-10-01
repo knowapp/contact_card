@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>The Codingdojo contact page!</title>
+    <meta name="description" content="jQuery. Wish me a good luck!">
+    <style type="text/css">
+    </style>      
+    <link rel="stylesheet" type="text/css" href="style_19.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>  
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $("button").click(function() {
+                //Extract values from input fields
+                    var first = $("#first").val();
+                    var last = $("#last").val();
+                    var desc = $("textarea").val();
+                        //Append dynamically created div to DOM
+                    $("#output").append("<div id = 'card'><h1>" + first + " " + last + "</h1><p> " + desc + "</p></div>");
+                        //Clear form fields by setting their value to empty
+                    $("#first").val("");
+                    $("#last").val("");
+                    $("#desc").val("");
+                        //Return false to prevent refresh
+                return false;
+                });
+            });
+        </script>
+    </head>
+
+<body>
+    <div id="wrapper">
+        <h1>Contact Card</h1>
+        <div id="left">
+            <form>
+                <label for="first">First Name:</label>
+                <input type="text" name="first" id="first">
+                <label for="last">Last Name:</label>
+                <input type="text" name="last" id="last">
+                <label for="desc">Description:</label>
+                <textarea id="desc"  name="desc" maxlength="50" type="text"></textarea>
+                <button>Add User</button> Limit:<span id="desc">50</span>
+            </form>
+        </div>
+        <div id="output">
+        </div>
+    </div>
+
+</body>
+
+</html>

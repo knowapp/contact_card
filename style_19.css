@@ -1,0 +1,37 @@
+html {
+    background-color: #1a1a1a;
+    font-family: 'Open Sans', sans-serif;
+    /*text-align: center;*/
+    }
+
+#wrapper {
+    width: 500px;
+    height: 900px;
+    margin: auto;
+    padding: 10px;
+    background-color: white;
+}
+h1{
+    text-align: center;
+}
+
+input,
+textarea {
+    display: block;
+}
+
+#left,
+#output {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+}
+
+#card {
+    width: 200px;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px 0;
+}
